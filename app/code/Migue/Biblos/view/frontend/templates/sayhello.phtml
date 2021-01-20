@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * @var \Migue\Biblos\Block\Display $block
+ */
+
+echo $block->sayHello();
+
+?>
+
+<style>
+table {  font-family: arial, sans-serif;  border-collapse: collapse;  width: 100%;  margin-top: 30px;}
+td, th {  border: 1px solid #dddddd;  text-align: left;  padding: 8px;  }
+tr:nth-child(even) { background-color: #dddddd; }
+.post-id{width:2%} .post-name{width:30%}
+
+</style>
+
+<table>
+  <tr>
+    <th class="post-id_libro">Id</th>
+    <th class="post-titulo">Título del libro</th>
+    <th class="post-autor">Autor</th>
+    <th class="post-editorial">Editorial</th>
+    <th class="post-anio_publicacion">Año de publicación</th>
+    <th class="post-unidades_disponibles">Unidades disponibles</th>
+  </tr>
+    <?php
+        foreach ($block->getPostCollection() as $key=>$post){
+            echo '<tr>
+                    <td>'.$post->getMigue_Biblos_post().'</td>
+                    <td>'.$post->getMigue_Biblos_post().'</td>
+                    <td>'.$post->getMigue_Biblos_post().'</td>
+                    <td>'.$post->getMigue_Biblos_post().'</td>
+                    <td>'.$post->getMigue_Biblos_post().'</td>
+                    <td>'.$post->getMigue_Biblos_post().'</td>
+                  </tr>';
+        }
+    ?>
+</table>
+
+</body>
+</html>
